@@ -1,0 +1,13 @@
+numpy
+matplotlib
+scipy
+pandas
+tensorflow
+tensorflow-metal
+scikit-learn
+torch
+torchvision
+segmentation-models-pytorch
+transformers
+
+
