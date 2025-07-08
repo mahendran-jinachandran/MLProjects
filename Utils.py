@@ -8,9 +8,9 @@ class DeviceTypes(Enum):
 
 class DLFrameworks(Enum):
     TensorFlow = "tensorflow"
-    Torch = "torch"
+    PyTorch = "torch"
 
-def getDeviceType(framework):
+def getDeviceType(framework: DLFrameworks):
 
     def _torch_dev():
         import torch
@@ -33,7 +33,7 @@ def getDeviceType(framework):
         
         return tf.device(DEVICE)
 
-    if framework is DLFrameworks.Torch:
+    if framework is DLFrameworks.PyTorch:
         try:
             return _torch_dev()
         except ImportError:
